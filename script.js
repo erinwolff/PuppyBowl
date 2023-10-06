@@ -126,8 +126,8 @@ const renderAllPlayers = (playerList) => {
   mainElement.append(sectionElement);
 
 
-  if (!playerList) {
-    playerList.innerHTML = `<p>No players available.</p>`;
+  if (!playerList.length) {
+    mainElement.innerHTML = `<p>No players available.</p>`;
     return;
   }
 
