@@ -59,7 +59,7 @@ const addNewPlayer = async (playerObj) => {
         name: newPlayerForm.nameInput.value,
         breed: newPlayerForm.breedInput.value,
         imageUrl: newPlayerForm.imageInput.value,
-        teamId: newPlayerForm.teamInput.value,
+        teamId: (Math.floor(Math.random() * (358-357 + 1 )) + 357),
       }),
     });
 
@@ -74,8 +74,7 @@ const addNewPlayer = async (playerObj) => {
     newPlayerForm.nameInput.value = ``;
     newPlayerForm.breedInput.value = ``;
     newPlayerForm.imageInput.value = ``;
-    newPlayerForm.teamInput.value = `357 or 358`;
-
+    
     init();
 
   } catch (err) {
@@ -264,16 +263,6 @@ const renderNewPlayerForm = () => {
     imageInput.type = "text";
     imageInput.name = "imageInput";
     newPlayerForm.append(imageInput);
-
-    const teamLabel = document.createElement("label");
-    teamLabel.innerHTML = `Team ID:`;
-    newPlayerForm.append(teamLabel);
-
-    const teamInput = document.createElement("input");
-    teamInput.type = "text";
-    teamInput.name = "teamInput";
-    teamInput.value = "357 or 358";
-    newPlayerForm.append(teamInput);
 
     const submitButton = document.createElement("button");
     submitButton.innerHTML = `Add New Player`
