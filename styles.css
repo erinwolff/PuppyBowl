@@ -1,0 +1,68 @@
+main {
+  font-family: monospace;
+}
+
+body {
+  background-color: rgb(173, 173, 245);
+}
+
+section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.cards {
+  border: 2px solid black;
+  width: 30rem;
+  display: flex;
+  justify-content: center;
+  margin: 1rem;
+  background-color: white;
+}
+
+h2 {
+  color: rgb(112, 21, 112);
+}
+
+p {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+img {
+  width: 200px;
+  height: 300px;
+  object-fit: contain;
+  margin: 5%;
+  padding: 0;
+}
+
+#new-player-form {
+  display: flex;
+  justify-content: space-evenly;
+  font-family: monospace;
+  font-size: 2em;
+  background-color: white;
+  padding: 30px;
+  margin: 0;
+  border: 2px solid black;
+}
+
+button {
+  font-family: monospace;
+  margin: 5px;
+}
+
+input {
+  font-family: monospace;
+  font-size: 1rem;
+}
+
+@media (max-width: 1200px) {
+  #new-player-form {
+    display: flex;
+    flex-direction: column;
+  }
+}
